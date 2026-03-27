@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: FastAPI_Backend/Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - project_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  frontend:
+    build:
+      context: ./react_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - project_network
+    depends_on:
+      backend:
+        condition: service_healthy
+
+networks:
+  project_network:

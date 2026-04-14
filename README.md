@@ -4,7 +4,7 @@
 # 🥗 AI-Powered Diet Recommendation System
 
 ## 🧠 Overview
-This project is an end-to-end **AI-based diet recommendation system** that generates personalized meal plans based on user inputs such as age, weight, height, and fitness goals.
+An end-to-end ML-based system that generates personalized meal plans using user health parameters (BMI, age, goals), achieving ~2s response latency with a scalable FastAPI + React architecture.
 
 It integrates a **machine learning-powered backend (FastAPI)** with a **responsive React frontend**, enabling real-time recommendation generation.
 
@@ -82,7 +82,7 @@ http://localhost:5173
 
 Access via: http://YOUR_LAN_IP:5173
 
-Example: http://192.168.1.25:5173
+Example: http://<LAN_IP>:5173
 
 🌐 Deployment
 
@@ -113,10 +113,6 @@ Mobile access issues → check firewall & network
 Integration of advanced ML models (deep learning)
 
 User authentication & personalization tracking
-
-Expanded nutrition dataset
-
-Performance optimization for large-scale users
 
 🎯 Impact
 
